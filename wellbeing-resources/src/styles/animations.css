@@ -1,0 +1,85 @@
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+/* CSS Classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+/* Hover Animations */
+.category-card:hover {
+  transform: translateY(-2px);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive hover effects */
+@media (hover: hover) {
+  .category-card {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .resource-card {
+    transition: transform 0.2s ease-out;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
